@@ -1,0 +1,660 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #e0d6cf 0%, #bfa98e 50%, #8d6e63 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+}
+.nav {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+  gap: 40px; /* Space between links */
+  font-size: 1.5rem; /* Make links bigger */
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.nav a {
+  color: #272a2d;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+.nav a:hover,
+.nav a.active {
+  background: #4a90e2;
+  color: #fff;
+}
+.auth-buttons {
+  display: flex;
+  gap: 15px;
+}
+.btn {
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+.btn-login {
+  background: #040404;
+  color: white;
+  border: none;
+}
+.btn-learn {
+  background: #0d0e0d;
+  color: white;
+  padding: 18px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 16px rgba(78, 205, 196, 0.15);
+}
+.btn-learn:hover {
+  background: #0a0a0a;
+  transform: translateY(-2px) scale(1.05);
+  color: white;
+}
+.btn-login:hover {
+  background: #0b0b0b;
+  color: white;
+  transform: translateY(-2px);
+}
+.btn-signup {
+  background: #ffa726;
+  color: white;
+}
+.btn-signup:hover {
+  background: #ff9800;
+  transform: translateY(-2px);
+}
+/* Main content */
+.main-content {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 80vh;
+  scroll-margin-top: 100px; /* Adjust this value to your header height */
+}
+.content-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.teacher-illustration {
+  width: 350px;
+  height: 350px;
+}
+.content-right {
+  flex: 1;
+  padding-left: 80px;
+}
+.main-heading {
+  font-size: 72px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 2px;
+  animation: fadeInDown 1s;
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.sub-heading {
+  font-size: 48px;
+  color: #8d6e63;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+.description {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+.btn-learn {
+  background: #0b0b0b;
+  color: white;
+  padding: 18px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 16px rgba(78, 205, 196, 0.15);
+}
+.btn-learn:hover {
+  background: #101111;
+  transform: translateY(-2px) scale(1.05);
+  color: white;
+}
+.btn-login {
+  background: #040404;
+  color: white;
+  border: none;
+}
+.btn-login:hover {
+  background: #45b7aa;
+  color: white;
+  transform: translateY(-2px);
+}
+.btn-signup {
+  background: #ffa726;
+  color: white;
+}
+.btn-signup:hover {
+  background: #ff9800;
+  transform: translateY(-2px);
+}
+/* Section styles */
+section {
+  padding: 80px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  scroll-margin-top: 100px; /* Adjust this value to your header height */
+}
+section h2 {
+  font-size: 40px;
+  color: #070808;
+  margin-bottom: 20px;
+  text-align: center;
+}
+section p {
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+}
+/* Chat support button */
+.chat-support {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: rgba(141, 110, 99, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 1000;
+  box-shadow: 0 4px 16px rgba(141, 110, 99, 0.2);
+}
+.chat-support:hover {
+  background: #8d6e63;
+  transform: scale(1.1);
+}
+.chat-support::before {
+  content: "💬";
+  font-size: 24px;
+  color: white;
+}
+/* Chat modal */
+.chat-modal {
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  right: 40px;
+  width: 320px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  z-index: 2000;
+  padding: 24px 20px 16px 20px;
+}
+.chat-modal.active {
+  display: block;
+}
+.chat-modal-header {
+  font-weight: bold;
+  color: #4ecdc4;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.chat-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #8d6e63;
+  cursor: pointer;
+}
+.chat-modal-body {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+/* Cryptography Tools Card Styles */
+.cipher-box {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 2rem;
+}
+.cipher-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+.cipher-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+.cipher-header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #4a5568;
+}
+.cipher-description {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border-left: 4px solid #667eea;
+}
+.cipher-description h4 {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+.cipher-description ol {
+  margin-left: 1.5rem;
+  color: #4a5568;
+}
+.cipher-description li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+.input-group {
+  margin-bottom: 1.5rem;
+}
+.input-group label {
+  display: block;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+.input-group input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.input-group input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+button.btn-primary {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-width: 120px;
+}
+button.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+button.btn-secondary {
+  background: linear-gradient(135deg, #48bb78, #38a169);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-width: 120px;
+}
+button.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(72, 187, 120, 0.3);
+}
+.result-group {
+  background: #f7fafc;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+}
+.result-group strong {
+  color: #4a5568;
+}
+.result-value {
+  color: #2d3748;
+  font-family: "Courier New", monospace;
+  font-weight: 600;
+  word-break: break-all;
+}
+/* --- Enhanced RSA Cipher Card Styles --- */
+#rsa .cipher-box {
+  background: linear-gradient(135deg, #f8fafc 60%, #e3e6ff 100%);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.13),
+    0 1.5px 6px rgba(118, 75, 162, 0.07);
+  border: 2px solid #667eea;
+  padding: 2.8rem 2.2rem;
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+#rsa .cipher-box::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, #667eea33 60%, transparent 100%);
+  z-index: 0;
+}
+#rsa .cipher-header h2 {
+  color: #667eea;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-shadow: 1px 2px 8px #e3e6ff;
+}
+#rsa .cipher-description {
+  background: #eef2ff;
+  border-left: 5px solid #667eea;
+  color: #4a5568;
+}
+#rsa .cipher-description h4 {
+  color: #4a5568;
+}
+#rsa .cipher-description ol {
+  color: #5a5e8a;
+}
+#rsa .input-group input {
+  border: 2px solid #b3b8f7;
+  background: #f4f7ff;
+}
+#rsa .input-group input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px #667eea22;
+  background: #fff;
+}
+#rsa .btn-primary {
+  background: linear-gradient(135deg, #667eea 60%, #764ba2 100%);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border: none;
+}
+#rsa .btn-primary:hover {
+  background: linear-gradient(135deg, #5a67d8 60%, #6b21a8 100%);
+  box-shadow: 0 8px 24px #667eea33;
+}
+#rsa .btn-secondary {
+  background: linear-gradient(135deg, #48bb78 60%, #38a169 100%);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+}
+#rsa .btn-secondary:hover {
+  background: linear-gradient(135deg, #38a169 60%, #22543d 100%);
+  box-shadow: 0 8px 24px #48bb7833;
+}
+#rsa .result-group {
+  background: #f4f7ff;
+  border: 1.5px solid #b3b8f7;
+  color: #3b3663;
+}
+#rsa .result-group strong {
+  color: #667eea;
+}
+#rsa .result-value {
+  color: #4a5568;
+  font-family: "Fira Mono", "Courier New", monospace;
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+}
+/* --- Enhanced Caesar Cipher Card Styles --- */
+#caesar .cipher-box {
+  background: linear-gradient(135deg, #f8fafc 60%, #e3e6ff 100%);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.13),
+    0 1.5px 6px rgba(118, 75, 162, 0.07);
+  border: 2px solid #667eea;
+  padding: 2.8rem 2.2rem;
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+#caesar .cipher-box::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, #667eea33 60%, transparent 100%);
+  z-index: 0;
+}
+#caesar .cipher-header h2 {
+  color: #667eea;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-shadow: 1px 2px 8px #e3e6ff;
+}
+#caesar .cipher-description {
+  background: #eef2ff;
+  border-left: 5px solid #667eea;
+  color: #4a5568;
+}
+#caesar .cipher-description h4 {
+  color: #4a5568;
+}
+#caesar .input-group input {
+  border: 2px solid #b3b8f7;
+  background: #f4f7ff;
+}
+#caesar .input-group input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px #667eea22;
+  background: #fff;
+}
+#caesar .btn-primary {
+  background: linear-gradient(135deg, #667eea 60%, #764ba2 100%);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border: none;
+}
+#caesar .btn-primary:hover {
+  background: linear-gradient(135deg, #5a67d8 60%, #6b21a8 100%);
+  box-shadow: 0 8px 24px #667eea33;
+}
+#caesar .result-group {
+  background: #f4f7ff;
+  border: 1.5px solid #b3b8f7;
+  color: #3b3663;
+}
+#caesar .result-group strong {
+  color: #667eea;
+}
+#caesar .result-value {
+  color: #4a5568;
+  font-family: "Fira Mono", "Courier New", monospace;
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+}
+/* Concepts Grid Styles */
+.concepts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin: 2.5rem 0 1rem 0;
+  justify-items: center;
+}
+.concept-card {
+  background: linear-gradient(135deg, #f8fafc 60%, #e3e6ff 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(102, 126, 234, 0.1);
+  padding: 2rem 1.2rem 1.5rem 1.2rem;
+  text-align: center;
+  border: 1.5px solid #b3b8f7;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.concept-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px #667eea22;
+}
+.concept-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.7rem;
+  color: #667eea;
+}
+.concept-card h3 {
+  color: #667eea;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+.concept-card p {
+  color: #4a5568;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.concept-btn {
+  display: inline-block;
+  margin: 0.7em 0 0.3em 0;
+  padding: 0.5em 1.2em;
+  background: linear-gradient(135deg, #667eea 60%, #764ba2 100%);
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.98em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  box-shadow: 0 2px 8px #667eea22;
+}
+.concept-btn:hover {
+  background: linear-gradient(135deg, #5a67d8 60%, #6b21a8 100%);
+  box-shadow: 0 4px 16px #667eea33;
+}
+.concept-fact {
+  margin-top: 0.5em;
+  font-size: 0.95em;
+  color: #4a5568;
+  background: #eef2ff;
+  border-left: 3px solid #667eea;
+  border-radius: 8px;
+  padding: 0.6em 1em;
+  text-align: left;
+}
+@media (max-width: 900px) {
+  .main-content {
+    flex-direction: column;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  .content-right {
+    padding-left: 0;
+    padding-top: 40px;
+  }
+  .main-heading {
+    font-size: 48px;
+  }
+  .sub-heading {
+    font-size: 32px;
+  }
+  .teacher-illustration {
+    width: 220px;
+    height: 220px;
+  }
+  .container {
+    grid-template-columns: 1fr !important;
+  }
+  .cipher-box {
+    padding: 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    padding: 15px 10px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .nav {
+    gap: 20px;
+  }
+  .main-content {
+    padding: 20px 5px;
+  }
+  .main-heading {
+    font-size: 32px;
+  }
+  .sub-heading {
+    font-size: 22px;
+  }
+}
+@media (max-width: 700px) {
+  .concepts-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}
